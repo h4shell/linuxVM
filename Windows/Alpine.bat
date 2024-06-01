@@ -29,4 +29,4 @@ echo ^|   Password: password            ^|
 echo ^|                                 ^|
 echo  ---------------------------------
 echo.
-cmd.exe /c "start /B qemu -hda %FILE& -boot c -m 1024 -netdev user,id=n1,hostfwd=tcp::20000-:22,hostfwd=tcp::20001-:20001,hostfwd=tcp::20002-:20002,hostfwd=tcp::20003-:20003,hostfwd=tcp::20004-:20004,hostfwd=tcp::20005-:20005,hostfwd=udp::20000-:20000,hostfwd=udp::20001-:20001,hostfwd=udp::20002-:20002,hostfwd=udp::20003-:20003,hostfwd=udp::20004-:20004,hostfwd=udp::20005-:20005 -device virtio-net,netdev=n1 -machine q35 -nographic -smp 6 -serial none -monitor none"
+qemu -hda alpine.img -boot c -m 1024 -netdev user,id=n1,hostfwd=tcp::20000-:22 -device virtio-net,netdev=n1 -machine q35 -nographic -smp 6 -serial none -monitor none
