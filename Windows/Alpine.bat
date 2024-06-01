@@ -11,7 +11,7 @@ IF EXIST %FILE% (
 
 echo Alpine-VM started: SSH: 127.0.0.1:20000
 echo.
-echo "                                                                 "
+echo "                                                                "
 echo "       | |     (_)            | |    (_)                 	"
 echo "   __ _| |_ __  _ _ __   ___  | |     _ _ __  _   ___  __	"
 echo "  / _` | | '_ \| | '_ \ / _ \ | |    | | '_ \| | | \ \/ /	"
