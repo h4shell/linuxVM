@@ -29,4 +29,4 @@ echo ^|   Password: password            ^|
 echo ^|                                 ^|
 echo  ---------------------------------
 echo.
-qemu -hda alpine.img -boot c -m 1024 -netdev user,id=n1,hostfwd=tcp::20000-:22, hostfwd=tcp::2222-:2222 -device virtio-net,netdev=n1 -machine q35 -nographic -smp 6 -serial none -monitor none
+qemu -hda alpine.img -boot c -m 1024 -netdev user,id=n1,hostfwd=tcp::20000-:22,hostfwd=tcp::2222-:2222 -device virtio-net,netdev=n1 -machine q35 -nographic -smp 6 -serial none -monitor none
