@@ -2,7 +2,7 @@
 set FILE="alpine.img"
 
 IF EXIST %FILE% (
-	echo file exist... -> SKIP
+	echo
 	cls
 ) ELSE (
 	curl -o %FILE% -L https://github.com/h4shell/termux_alpinelinux/raw/main/alpine.img
