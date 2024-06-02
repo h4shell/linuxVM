@@ -2,7 +2,7 @@
 # exec > /dev/null 2>&1
 LINUX_IMG="alpine.img"
 
-if [ -e "/usr/bin/qemu-system-x86_64" ]; then
+if [ -e "/data/data/com.termux/files/usr/bin/qemu-system-x86_64" ]; then
     # QEMU installato
     echo
 else
