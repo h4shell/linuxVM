@@ -4,16 +4,15 @@ LINUX_IMG="alpine.img"
 
 if [ -e "/usr/bin/qemu-system-x86_64" ]; then
     # QEMU installato
-    
+    echo
+else
+    # QEMU non installato
     pkg up
     pkg install unstable-repo -y
     pkg install curl -y
     pkg install x11-repo -y
     pkg install qemu-system-x86-64-headless -y
     pkg install qemu-utils -y
-else
-    # QEMU non installato
-    echo
 fi
 
 if [ -e "./$LINUX_IMG" ]; then
