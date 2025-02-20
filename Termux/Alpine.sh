@@ -2,7 +2,7 @@
 # exec > /dev/null 2>&1
 LINUX_IMG="alpine.img"
 
-mkdir qemu_tmp 2> /dev/null
+mkdir ./qemu_tmp 2> /dev/null
 
 # Funzione per installare pacchetti su Termux
 install_termux() {
@@ -105,5 +105,4 @@ echo
 echo $PID_QEMU_ALPINE > ./qemu_tmp/PID_QEMU_ALPINE.pid
 read -p "Press any key to stop Alpine VM..." qpid
 kill -9 $PID_QEMU_ALPINE
-rm ./qemu_tmp/PID_QEMU_ALPINE.pid
 rm -R ./qemu_tmp
