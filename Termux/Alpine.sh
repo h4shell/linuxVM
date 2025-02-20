@@ -32,14 +32,15 @@ install_fedora() {
     sudo dnf install -y qemu-system-x86 qemu-img curl
 }
 
-# Rileva il sistema operativo
-if [ -e "/data/data/com.termux/files/usr/bin/qemu-system-x86_64" ]; then
-    # Termux
-    install_termux
-elif [ -e "/usr/bin/apt" ]; then
-    # Ubuntu/Debian
+
+if [ -e "/data/data/com.termux/files/usr/bin/pkg" ]; then
     if [ -e "/usr/bin/qemu-system-x86" ]; then
-        # alpine.img esiste
+        install_termux
+    else
+        echo
+    fi
+elif [ -e "/usr/bin/apt" ]; then
+    if [ -e "/usr/bin/qemu-system-x86" ]; then
         install_ubuntu_debian
     else
         echo
@@ -62,7 +63,6 @@ else
 fi
 
 if [ -e "./$LINUX_IMG" ]; then
-    # alpine.img esiste
     echo
 else
     curl -o $LINUX_IMG -L https://github.com/h4shell/termux_alpinelinux/raw/main/$LINUX_IMG
