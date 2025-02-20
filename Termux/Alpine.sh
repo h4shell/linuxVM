@@ -34,7 +34,7 @@ install_fedora() {
 
 
 if [ -e "/data/data/com.termux/files/usr/bin/pkg" ]; then
-    if [ -e "/usr/bin/qemu-system-x86" ]; then
+    if [ -e "/data/data/com.termux/files/usr/bin/qemu-system-x86" ]; then
         install_termux
     else
         echo
